@@ -1,0 +1,42 @@
+[
+    {
+        "id":1,
+        "title": "WorldSkills ASEAN 2023",
+        "context":"22-27 July 2023\n\nSuntec Singapore Convention & Exhibition Centre, Singapore\n\nworldskillsasean.org\n\nWorldSkills ASEAN is the largest showcase of professional and technical skills in the ASEAN (The Association of Southeast Asian Nations) region and brings the objectives of the WorldSkills movement to Southeast Asia. The skills competition was initiated by an agreement among ASEAN member countries in 1993 and aims to promote and raise skills standards in the ASEAN region to an international level, as well as to motivate youths to develop their skills and knowledge. ASEAN member countries take turns to host the biennial WorldSkills ASEAN Competition. For the first time, Singapore will be hosting the 13th WorldSkills ASEAN Competition from 22-27 July 2023 at the Suntec Singapore Convention & Exhibition Centre. The competition will see top youth talents from the 10 ASEAN member countries competing in 22 skills areas. Apart from the skills competition, WorldSkills ASEAN Singapore 2023 will also feature interactive activities to promote skills and a skilled career to youths and the public.",
+        "pics":[
+            "https://worldskillsasean.org/2023/application/files/thumbnails/landscape/6916/8736/0374/WSS2018-Workshop-1.jpg",
+            "https://worldskillsasean.org/2023/application/files/thumbnails/landscape/3716/8736/0405/WSS2018-Workshop-2.jpg",
+            "https://worldskillsasean.org/2023/application/files/9616/8746/4844/WSS2018-Booth-1.jpg"
+        ]
+    },
+    {
+        "id":2,
+        "title":"The 18th Youth Monozukuri Skills Competition of Japan",
+        "context":"1-2 August 2023\n\nShizuoka, Japan\n\nThis competition is for youths 20 years old or younger who are currently learning skills at vocational abilities development institutions, technical high schools or other such institutes of learning and have not started work. This competition was launched in 2005 for the purpose of providing them with goals and widening the horizons of young skilled workers.",
+        "pics":[
+            "https://i.ytimg.com/vi/q52JgcIUmy0/mqdefault.jpg",
+            "https://www.monozukuri-takumi-expo.tokyo/ogp.jpg",
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXmqgyRPeX3fSyNMGT8xQ4I39yOAMF9BqbF5gLdjd_IVIFjs4aAwyuvGPXF-O8bD0Mpmo&usqp=CAU"
+        ]
+    },
+    {
+        "id":3,
+        "title":"WorldSkills Australia National Championship",
+        "context":"Melbourne Convention and Exhibition Centre, Melbourne Victoria, Australia\n\nwww.worldskills.org.au\n\nThe WorldSkills National Championships are run every two years and are Australia’s largest and most successful vocational education excellence competition. The event showcases over 60 skill categories and brings together hundreds of our nation’s best apprentices, trainees, educators, employers, and industry professionals to compete for the title of national champion in each skill category. The showcase event creates an interactive and engaging environment for tens of thousands of school aged children, their families, industry associations and employer groups. Those attending experience an un-matched variety of skilled trades and technology careers under the one roof and can watch the competitions, participate in Try-a-Skill demonstrations, and network with the hundreds of industry and educational experts.",
+        "pics":[
+            "https://www.worldskills.org.au/wp-content/uploads/2022/04/51480420333_5794a9d905_k-964x643.jpg",
+            "https://www.worldskills.org.au/wp-content/uploads/2022/04/51480535653_44bb8051e1_k-600x400.jpg",
+            "https://www.worldskills.org.au/wp-content/uploads/2022/04/Roadmap-Timeline-Process-Infographic-Graph-600x450.png"
+        ]
+    },
+    {
+        "id":4,
+        "title":"German National Competition - Additive Manufacturing",
+        "context":"The German National Competition in Skill Additive Manufacturing will be held at the University of Applied Sciences Südwestfalen in Soest, where the WorldSkills Competition 2022 Special Edition in this skill was also held in 2022.",
+        "pics":[
+            "https://www.rapidtech-3d.com/fileadmin/user_upload/Rapid.Tech_3D/2023/Pressemeldungen/_DSC5816.jpg",
+            "https://www.tctmagazine.com/downloads/6860/download/StratasysTCT.jpeg?cb=911f2943f376995b1adddd664507ae57",
+            "https://www.databridgemarketresearch.com/media/2022/12/EuropeAdditiveManufacturingMarket.jpg"
+        ]
+    }
+]
