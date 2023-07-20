@@ -30,21 +30,19 @@ class _BigPicDialogState extends State<BigPicDialog>
   Widget build(BuildContext context) {
     return Dialog(
       backgroundColor: Colors.transparent,
-      child: SizedBox(
-        height: 500 * 180 / 320 - 50,
-        width: 500,
-        child: ClipRRect(
-          borderRadius: BorderRadius.circular(20),
-          child: PageView(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(20),
+        child: AspectRatio(
+          aspectRatio: 1,
+          child: PageView.builder(
             controller: controller,
-            children: [
-              Image.network(
-                widget.pics[0],
-                key: key,
-              ),
-              Image.network(widget.pics[1]),
-              Image.network(widget.pics[2])
-            ],
+            itemCount: widget.pics.length,
+            itemBuilder: (BuildContext context, int index) {
+              return Image.network(
+                widget.pics[index],
+                fit: BoxFit.cover,
+              );
+            },
           ),
         ),
       ),

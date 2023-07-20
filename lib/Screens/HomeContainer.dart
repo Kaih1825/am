@@ -14,6 +14,7 @@ class HomeContainer extends StatefulWidget {
 class _HomeContainerState extends State<HomeContainer> {
   var screens = [const HomeScreen(), const TicketsList()];
   var selected = 0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +39,7 @@ class _HomeContainerState extends State<HomeContainer> {
               label: ""),
           BottomNavigationBarItem(
               icon: Text(
-                "Events",
+                "Tickets",
                 style:
                     TextStyle(color: selected == 1 ? Colors.red : Colors.black),
               ),
