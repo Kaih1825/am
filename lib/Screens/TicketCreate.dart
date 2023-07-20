@@ -17,7 +17,7 @@ class TicketCreate extends StatefulWidget {
 }
 
 class _TicketCreateState extends State<TicketCreate> {
-  var eventValue = "Closing Ceremony";
+  var eventValue = "Opening Ceremony";
   var controller = TextEditingController();
 
   XFile? image;
@@ -83,12 +83,12 @@ class _TicketCreateState extends State<TicketCreate> {
                       value: eventValue,
                       items: const [
                         DropdownMenuItem(
-                          value: "Closing Ceremony",
-                          child: Text("Closing Ceremony"),
-                        ),
-                        DropdownMenuItem(
                           value: "Opening Ceremony",
                           child: Text("Opening Ceremony"),
+                        ),
+                        DropdownMenuItem(
+                          value: "Closing Ceremony",
+                          child: Text("Closing Ceremony"),
                         ),
                       ],
                       onChanged: (value) {
