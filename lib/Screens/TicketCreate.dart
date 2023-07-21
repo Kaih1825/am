@@ -19,8 +19,29 @@ class TicketCreate extends StatefulWidget {
 class _TicketCreateState extends State<TicketCreate> {
   var eventValue = "Opening Ceremony";
   var controller = TextEditingController();
+  var base64 = "";
 
   XFile? image;
+
+  Future<XFile?> gatImage() async {
+    var picker = ImagePicker();
+    image =
+        await picker.pickImage(source: ImageSource.gallery, imageQuality: 25);
+
+    var file = File(image!.path);
+    var img = await decodeImageFromList(file.readAsBytesSync());
+    print(img.width);
+    print(img.height);
+    if (img.width > 5000 || img.height > 5000) {
+      ScaffoldMessenger.of(context)
+          .showSnackBar(SnackBar(content: Text("Image is too large.")));
+      return null;
+    }
+    var byteArray = await file.readAsBytes();
+    base64 = base64Encode(byteArray);
+
+    return image!;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -34,10 +55,7 @@ class _TicketCreateState extends State<TicketCreate> {
           width: 300,
           child: ElevatedButton(
             onPressed: () async {
-              if (image != null && controller.text.isNotEmpty) {
-                var file = File(image!.path);
-                var byteArray = file.readAsBytesSync();
-                var base64 = base64Encode(byteArray);
+              if (base64.isNotEmpty && controller.text.isNotEmpty) {
                 var time = DateTime.now();
                 var formater = DateFormat("yyyy-MM-dd HH:MM");
                 var ch = ["A", "B", "C"];
@@ -115,8 +133,7 @@ class _TicketCreateState extends State<TicketCreate> {
                     child: ElevatedButton(
                         onPressed: () async {
                           var picker = ImagePicker();
-                          image = await picker.pickImage(
-                              source: ImageSource.gallery);
+                          image = await gatImage();
                           setState(() {});
                         },
                         child: const Text("Chose one picture")),

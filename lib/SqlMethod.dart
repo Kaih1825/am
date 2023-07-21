@@ -40,4 +40,9 @@ class Ticket {
     closingTickets.value = List.from(await Ticket().closing());
     openingTickets.value = List.from(await Ticket().opening());
   }
+
+  removeAll() async {
+    Database db = await init();
+    await db.execute("DELETE FROM ticket");
+  }
 }

@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="edu.ws2022.a01.aa_0718">
-
+    
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
         android:label="aa_0718"
