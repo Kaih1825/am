@@ -1,4 +1,5 @@
 import 'package:aa_0718/Screens/HomeScreen.dart';
+import 'package:aa_0718/Screens/Records.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -12,7 +13,7 @@ class HomeContainer extends StatefulWidget {
 }
 
 class _HomeContainerState extends State<HomeContainer> {
-  var screens = [const HomeScreen(), const TicketsList()];
+  var screens = [const HomeScreen(), const TicketsList(), const Records()];
   var selected = 0;
 
   @override
@@ -43,7 +44,14 @@ class _HomeContainerState extends State<HomeContainer> {
                 style:
                     TextStyle(color: selected == 1 ? Colors.red : Colors.black),
               ),
-              label: "")
+              label: ""),
+          BottomNavigationBarItem(
+              icon: Text(
+                "Records",
+                style:
+                    TextStyle(color: selected == 2 ? Colors.red : Colors.black),
+              ),
+              label: ""),
         ],
         onTap: (value) {
           selected = value;

@@ -2,6 +2,8 @@
     package="edu.ws2022.a01.aa_0718">
     
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
    <application
         android:label="aa_0718"
         android:name="${applicationName}"

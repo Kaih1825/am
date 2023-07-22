@@ -1,7 +1,6 @@
 import 'package:aa_0718/Screens/TicketCreate.dart';
 import 'package:aa_0718/Screens/TicketDetails.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:get/get.dart';
 
 import '../SqlMethod.dart';
@@ -18,8 +17,6 @@ var openingTickets = List.empty().obs;
 
 class _TicketsListState extends State<TicketsList> {
   final items = List<String>.generate(20, (i) => 'Item ${i + 1}');
-  var androidSetting = const AndroidInitializationSettings("Flutter");
-  var localInitalization = InitializationSettings(android: androidSetting);
 
   @override
   void initState() {

@@ -5,6 +5,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class TicketDetails extends StatefulWidget {
   final info;
@@ -17,6 +18,27 @@ class TicketDetails extends StatefulWidget {
 class _TicketDetailsState extends State<TicketDetails> {
   get info => widget.info;
   var key = GlobalKey();
+  final _flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+
+  void showLocalNotification(String title, String body) {
+    const androidNotificationDetail = AndroidNotificationDetails(
+      '0', // channel Id
+      'general', // channel Name
+    );
+    _flutterLocalNotificationsPlugin.show(0, title, body,
+        const NotificationDetails(android: androidNotificationDetail));
+  }
+
+  void download() async {
+    RenderRepaintBoundary boundary =
+        key.currentContext!.findRenderObject() as RenderRepaintBoundary;
+    var image = await boundary.toImage(pixelRatio: 2);
+    var data = await image.toByteData(format: ImageByteFormat.png);
+    File("/storage/emulated/0/Download/${Random().nextInt(100000)}.png")
+        .writeAsBytes(
+            data!.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes));
+    showLocalNotification("Saved", "Saved to download folder");
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -95,15 +117,8 @@ class _TicketDetailsState extends State<TicketDetails> {
                   child: SizedBox(
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () async {
-                        RenderRepaintBoundary boundary = key.currentContext!
-                            .findRenderObject() as RenderRepaintBoundary;
-                        var image = await boundary.toImage(pixelRatio: 2);
-                        var data =
-                            await image.toByteData(format: ImageByteFormat.png);
-                        File("/storage/emulated/0/Download/${Random().nextInt(100000)}.png")
-                            .writeAsBytes(data!.buffer.asUint8List(
-                                data.offsetInBytes, data.lengthInBytes));
+                      onPressed: () {
+                        download();
                       },
                       child: Text("Download"),
                     ),
